@@ -135,14 +135,7 @@
               Reflexology, and personalized Nutrition Counseling.
             </p>
 
-            <div
-              style="
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 1.5rem;
-                margin-bottom: 2rem;
-              "
-            >
+            <div class="about-feature-grid">
               <div
                 style="
                   background: #f8fafc;
@@ -247,25 +240,35 @@
         </div>
 
         <div class="doctor-team-grid">
-          <!-- Doctor 1: Dr. M. Angel Robert -->
+          <!-- Doctor 1: Dr. M. Angel Robert (Official Card Exact) -->
           <div class="doctor-card theme-robert">
             <div class="doctor-card-header">
-              <div class="doctor-circle-wrap">
-                <div class="doctor-gold-ring">
-                  <img
-                    src="/images/dr-robert-gold-circle.png"
-                    alt="Dr. M. Angel Robert - Consultant PT and Fitness"
-                  />
-                </div>
+              <!-- Dr. Robert Photo Area with Clinic & Cutout Suit -->
+              <div class="doctor-robert-photo-box">
+                <img
+                  src="/images/dr-robert-suit-new.png"
+                  alt="Dr. M. Angel Robert - Consultant PT and Fitness"
+                  class="doctor-robert-cutout"
+                />
               </div>
+
+              <!-- Header Content -->
               <div class="doctor-header-content">
-                <div class="doctor-category-badge">
-                  <i class="fa-solid fa-bone"></i> PHYSIOTHERAPY & FITNESS
+                <div class="doctor-header-top-row">
+                  <div class="doctor-category-badge">
+                    <i class="fa-solid fa-person-running"></i>
+                    <span>PHYSIOTHERAPY & FITNESS</span>
+                  </div>
+                  <div class="doctor-spine-graphic">
+                    <i class="fa-solid fa-bone"></i>
+                  </div>
                 </div>
+                
                 <h3 class="doctor-card-title">Dr. M. Angel Robert</h3>
                 <div class="doctor-card-subtitle">
                   Consultant: Physical Therapy & Fitness
                 </div>
+                
                 <div class="doctor-card-tags">
                   <span class="doctor-degree-pill">
                     <i class="fa-solid fa-graduation-cap"></i> B.P.T, M.P.Ed, Ph.D., PGDFM, PGDYE
@@ -273,7 +276,9 @@
                 </div>
               </div>
             </div>
-            <div class="doctor-card-wave"></div>
+            
+            <!-- Curving Teal Wave Band -->
+            <div class="doctor-card-wave wave-robert"></div>
 
             <div class="doctor-card-body">
               <p class="doctor-bio-text">
@@ -284,14 +289,15 @@
                 recovery.
               </p>
 
-              <div class="focus-header-banner">
-                <i class="fa-solid fa-bullseye"></i> CORE CLINICAL FOCUS
+              <!-- Pill Header with Pulse/EKG Icon -->
+              <div class="focus-header-banner banner-robert">
+                <i class="fa-solid fa-heart-pulse"></i> CORE CLINICAL FOCUS
               </div>
 
               <div class="focus-rows-list">
                 <div class="focus-row-item">
-                  <div class="focus-icon-box">
-                    <i class="fa-solid fa-lungs-virus"></i>
+                  <div class="focus-icon-box icon-spine">
+                    <img src="/images/icon-focus-spine.png" alt="Spine & Joint" />
                   </div>
                   <div class="focus-row-text">
                     <span class="focus-row-title">Spine & Joint Rehabilitation:</span>
@@ -300,8 +306,8 @@
                 </div>
 
                 <div class="focus-row-item">
-                  <div class="focus-icon-box">
-                    <i class="fa-solid fa-person-running"></i>
+                  <div class="focus-icon-box icon-sports">
+                    <img src="/images/icon-focus-sports.png" alt="Sports & Post-Op" />
                   </div>
                   <div class="focus-row-text">
                     <span class="focus-row-title">Sports & Post-Op Physical Therapy:</span>
@@ -310,8 +316,8 @@
                 </div>
 
                 <div class="focus-row-item">
-                  <div class="focus-icon-box">
-                    <i class="fa-solid fa-dumbbell"></i>
+                  <div class="focus-icon-box icon-fitness">
+                    <img src="/images/icon-focus-fitness.png" alt="Functional Biomechanics" />
                   </div>
                   <div class="focus-row-text">
                     <span class="focus-row-title">Functional Biomechanics & Fitness:</span>
@@ -333,55 +339,68 @@
                 </a>
               </div>
             </div>
+            <!-- Bottom Curved Gradient Footer -->
+            <div class="doctor-card-bottom-band band-robert"></div>
           </div>
 
-          <!-- Doctor 2: Dr. Albin Viju -->
+          <!-- Doctor 2: Dr. Albin Viju (Official Card Exact) -->
           <div class="doctor-card theme-albin">
             <div class="doctor-card-header">
-              <div class="doctor-circle-wrap">
+              <!-- Dr. Albin Photo in Golden Oval Frame -->
+              <div class="doctor-albin-photo-box">
                 <div class="doctor-gold-ring">
                   <img
-                    src="/images/dr-albin-gold-circle.png"
+                    src="/images/dr-albin-gold-circle-new.png"
                     alt="Dr. Albin Viju - Consultant Yoga and Naturopathy"
                   />
                 </div>
               </div>
+
+              <!-- Header Content -->
               <div class="doctor-header-content">
-                <div class="doctor-category-badge">
-                  <i class="fa-solid fa-spa"></i> YOGA & NATUROPATHY
+                <div class="doctor-header-top-row">
+                  <div class="doctor-category-badge badge-albin">
+                    <i class="fa-solid fa-spa"></i>
+                    <span>YOGA & NATUROPATHY</span>
+                  </div>
+                  <div class="doctor-yoga-graphic">
+                    <i class="fa-solid fa-person-praying"></i>
+                  </div>
                 </div>
+
                 <h3 class="doctor-card-title">Dr. Albin Viju</h3>
                 <div class="doctor-card-subtitle">
-                  Consultant: Yoga, Naturopathy &
+                  Consultant: Yoga & Naturopathy
                 </div>
+                
                 <div class="doctor-card-tags">
-                  <span class="doctor-massage-pill">
-                    <i class="fa-solid fa-hands-holding"></i> Massage Therapy
-                  </span>
-                  <span class="doctor-degree-pill">
+                  <span class="doctor-degree-pill degree-albin">
                     <i class="fa-solid fa-graduation-cap"></i> B.N.Y.S (Bachelor of Naturopathy & Yogic Sciences)
                   </span>
                 </div>
               </div>
             </div>
-            <div class="doctor-card-wave"></div>
+            
+            <!-- Curving Purple/Gold Wave Band -->
+            <div class="doctor-card-wave wave-albin"></div>
 
             <div class="doctor-card-body">
               <p class="doctor-bio-text">
                 Expert Naturopathic physician specializing in drug-free
                 lifestyle medicine, classical acupuncture, Varma meridian
-                stimulation, cupping therapy, <strong>massage therapy</strong>, and therapeutic yogic science for
+                stimulation, cupping therapy, and therapeutic yogic science for
                 permanent root-cause pain alleviation.
               </p>
 
-              <div class="focus-header-banner">
+              <!-- Pill Header with Lotus Icon -->
+              <div class="focus-header-banner banner-albin">
                 <i class="fa-solid fa-spa"></i> CORE CLINICAL FOCUS
               </div>
 
               <div class="focus-rows-list">
                 <div class="focus-row-item">
-                  <div class="focus-icon-box">
-                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                  <div class="focus-icon-box icon-needles">
+                    <img src="/images/icon-focus-needles.png" alt="Acupuncture & Varma" />
                   </div>
                   <div class="focus-row-text">
                     <span class="focus-row-title">Acupuncture & Varma Meridian Therapy:</span>
@@ -390,8 +409,8 @@
                 </div>
 
                 <div class="focus-row-item">
-                  <div class="focus-icon-box">
-                    <i class="fa-solid fa-fire-flame-curved"></i>
+                  <div class="focus-icon-box icon-cupping">
+                    <img src="/images/icon-focus-cupping.png" alt="Therapeutic Cupping" />
                   </div>
                   <div class="focus-row-text">
                     <span class="focus-row-title">Therapeutic Cupping & Detoxification:</span>
@@ -399,19 +418,9 @@
                   </div>
                 </div>
 
-                <div class="focus-row-item highlight-row">
-                  <div class="focus-icon-box">
-                    <i class="fa-solid fa-hands"></i>
-                  </div>
-                  <div class="focus-row-text">
-                    <span class="focus-row-title">Massage Therapy:</span>
-                    Therapeutic, deep tissue & relaxation massage for pain relief, muscle recovery & stress reduction.
-                  </div>
-                </div>
-
                 <div class="focus-row-item">
-                  <div class="focus-icon-box">
-                    <i class="fa-solid fa-heart-pulse"></i>
+                  <div class="focus-icon-box icon-lotus">
+                    <img src="/images/icon-focus-lotus.png" alt="Medical Yoga & Nutrition" />
                   </div>
                   <div class="focus-row-text">
                     <span class="focus-row-title">Medical Yoga & Naturopathic Nutrition:</span>
@@ -433,6 +442,8 @@
                 </a>
               </div>
             </div>
+            <!-- Bottom Curved Gradient Footer -->
+            <div class="doctor-card-bottom-band band-albin"></div>
           </div>
         </div>
       </div>

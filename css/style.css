@@ -886,6 +886,45 @@ ul {
 }
 
 /* ==========================================================================
+   FACILITY & COMMON FORM GRID LAYOUTS (RESPONSIVE)
+   ========================================================================== */
+
+.facility-showcase-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.form-row-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 850px) {
+  .facility-showcase-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-feature-grid,
+  .form-row-2col {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* ==========================================================================
    FLOATING CONTACT BUTTONS (COMPACT, 10PX RIGHT, 40% OPACITY -> 100% HOVER)
    ========================================================================== */
 
@@ -1359,175 +1398,246 @@ ul {
   box-shadow: 0 24px 50px -12px rgba(2, 132, 199, 0.25);
 }
 
-/* Theme 1: Physiotherapy & Fitness (Royal Blue) */
+/* Theme 1: Physiotherapy & Fitness (Light Clinic Blue / Teal) */
 .doctor-card.theme-robert {
-  border-top: 6px solid #0056b3;
+  border-top: none;
+  background: #ffffff;
 }
 .doctor-card.theme-robert .doctor-card-header {
-  background: radial-gradient(circle at 85% 20%, #0077cc 0%, #004b99 50%, #002d66 100%);
+  background: linear-gradient(135deg, #a1c8d9 0%, #d8edf7 60%, #e8f4fa 100%);
   position: relative;
-}
-.doctor-card.theme-robert .doctor-card-header::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 140px;
-  background-image: radial-gradient(ellipse at center, rgba(56, 189, 248, 0.2) 0%, transparent 70%);
-  pointer-events: none;
+  padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+  display: flex;
+  align-items: flex-end;
+  gap: 1.25rem;
 }
 
-/* Theme 2: Yoga & Naturopathy (Royal Purple / Violet / Gold) */
+.doctor-robert-photo-box {
+  width: 170px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: -1px;
+  z-index: 2;
+}
+
+.doctor-robert-cutout {
+  width: 100%;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.15));
+}
+
+/* Theme 2: Yoga & Naturopathy (Lilac / Royal Violet / Gold) */
 .doctor-card.theme-albin {
-  border-top: 6px solid #6b21a8;
+  border-top: none;
+  background: #ffffff;
 }
 .doctor-card.theme-albin .doctor-card-header {
-  background: radial-gradient(circle at 85% 20%, #8b28cf 0%, #581c87 50%, #3b0764 100%);
+  background: linear-gradient(135deg, #c7c3e5 0%, #dedbf1 60%, #f1effa 100%);
   position: relative;
-}
-.doctor-card.theme-albin .doctor-card-header::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 140px;
-  background-image: radial-gradient(ellipse at center, rgba(234, 179, 8, 0.25) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-.doctor-card-header {
-  padding: 2.25rem 2rem 2rem 2rem;
+  padding: 1.75rem 1.5rem 1.25rem 1.5rem;
   display: flex;
-  gap: 1.75rem;
   align-items: center;
-  position: relative;
-  overflow: hidden;
+  gap: 1.25rem;
 }
 
-/* Golden Circular Ring with Glow */
-.doctor-circle-wrap {
-  position: relative;
-  width: 150px;
-  height: 150px;
+.doctor-albin-photo-box {
+  width: 155px;
   flex-shrink: 0;
+  z-index: 2;
 }
 
-.doctor-gold-ring {
-  width: 100%;
-  height: 100%;
+.doctor-albin-photo-box .doctor-gold-ring {
+  width: 145px;
+  height: 145px;
   border-radius: 50%;
-  padding: 5px;
-  background: linear-gradient(135deg, #ffd700 0%, #ffa500 50%, #ff8c00 100%);
-  box-shadow: 0 0 25px rgba(255, 193, 7, 0.65), 0 8px 16px rgba(0, 0, 0, 0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 4px;
+  background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 50%, #d97706 100%);
+  box-shadow: 0 8px 24px rgba(217, 119, 6, 0.35);
 }
 
-.doctor-gold-ring img {
+.doctor-albin-photo-box .doctor-gold-ring img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
   display: block;
-  background: #0f172a;
 }
 
 .doctor-header-content {
   flex: 1;
-  color: #ffffff;
   z-index: 2;
 }
 
-.doctor-category-badge {
+.doctor-header-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.theme-robert .doctor-category-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #0369a1;
+  text-transform: uppercase;
+}
+
+.theme-robert .doctor-category-badge i {
+  color: #0284c7;
+  font-size: 1.1rem;
+}
+
+.doctor-spine-graphic {
+  color: #38bdf8;
+  font-size: 1.25rem;
+  opacity: 0.8;
+}
+
+.doctor-category-badge.badge-albin {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #581c87;
+  text-transform: uppercase;
+}
+
+.doctor-category-badge.badge-albin i {
+  color: #7e22ce;
+  font-size: 1.15rem;
+}
+
+.doctor-yoga-graphic {
+  color: #7e22ce;
+  font-size: 1.25rem;
+  opacity: 0.75;
+}
+
+.theme-robert .doctor-card-title {
+  color: #0f172a;
+  font-size: 1.65rem;
+  font-weight: 900;
+  margin-bottom: 0.35rem;
+  line-height: 1.2;
+}
+
+.theme-robert .doctor-card-subtitle {
+  color: #0369a1;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.65rem;
+}
+
+.theme-albin .doctor-card-title {
+  color: #1e1b4b;
+  font-size: 1.65rem;
+  font-weight: 900;
+  margin-bottom: 0.35rem;
+  line-height: 1.2;
+}
+
+.theme-albin .doctor-card-subtitle {
+  color: #6b21a8;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.65rem;
+}
+
+.theme-robert .doctor-degree-pill {
+  background: #0284c7;
+  color: #ffffff;
+  border: none;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.4rem 0.8rem;
+  border-radius: 9999px;
+  box-shadow: 0 4px 10px rgba(2, 132, 199, 0.25);
+}
+
+.doctor-degree-pill.degree-albin {
+  background: #7e22ce;
+  color: #ffffff;
+  border: none;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.4rem 0.8rem;
+  border-radius: 9999px;
+  box-shadow: 0 4px 10px rgba(126, 34, 206, 0.25);
+}
+
+/* Wavy band between header and body */
+.doctor-card-wave {
+  height: 16px;
+  width: 100%;
+}
+
+.wave-robert {
+  background: linear-gradient(90deg, #0284c7 0%, #06b6d4 100%);
+  clip-path: ellipse(65% 100% at 50% 0%);
+}
+
+.wave-albin {
+  background: linear-gradient(90deg, #7e22ce 0%, #eab308 100%);
+  clip-path: ellipse(65% 100% at 50% 0%);
+}
+
+.doctor-card-bottom-band {
+  height: 12px;
+  width: 100%;
+  margin-top: 1.5rem;
+  border-radius: 0 0 24px 24px;
+}
+
+.band-robert {
+  background: linear-gradient(90deg, #0284c7 0%, #06b6d4 100%);
+}
+
+.band-albin {
+  background: linear-gradient(90deg, #7e22ce 0%, #eab308 100%);
+}
+
+/* Focus header pills matching exact card */
+.banner-robert {
+  background: linear-gradient(135deg, #0d9488 0%, #0284c7 100%) !important;
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 800;
+  border-radius: 9999px;
+  padding: 0.45rem 1.25rem;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.banner-albin {
+  background: linear-gradient(135deg, #581c87 0%, #7e22ce 100%) !important;
+  color: #ffffff;
+  font-size: 0.82rem;
   font-weight: 800;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #ffffff;
-  margin-bottom: 0.6rem;
-}
-.doctor-category-badge i {
-  font-size: 1.25rem;
-  color: #facc15;
-}
-
-.doctor-card-title {
-  font-size: clamp(1.35rem, 4vw, 1.7rem);
-  font-weight: 900;
-  color: #ffffff;
-  line-height: 1.2;
-  margin-bottom: 0.45rem;
-  letter-spacing: -0.01em;
-  white-space: normal;
-  word-break: keep-all;
-}
-
-.doctor-card-subtitle {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: #e2e8f0;
-  margin-bottom: 0.65rem;
-  line-height: 1.35;
-}
-
-.doctor-card-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-top: 0.5rem;
-}
-
-.doctor-degree-pill {
+  border-radius: 9999px;
+  padding: 0.45rem 1.25rem;
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  color: #ffffff;
-  padding: 0.35rem 0.75rem;
-  border-radius: 9999px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
 }
 
-.doctor-degree-pill i {
-  color: #facc15;
-}
-
-.doctor-massage-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  background: #facc15;
-  color: #1e1b4b;
-  padding: 0.35rem 0.8rem;
-  border-radius: 9999px;
-  font-size: 0.8rem;
-  font-weight: 800;
-  letter-spacing: 0.02em;
-}
-
-/* Wave divider connecting header to body */
-.doctor-card-wave {
-  position: relative;
-  height: 24px;
-  margin-top: -1px;
-}
-.theme-robert .doctor-card-wave {
-  background: linear-gradient(180deg, #002d66 0%, #ffffff 100%);
-  clip-path: ellipse(75% 100% at 50% 0%);
-}
-.theme-albin .doctor-card-wave {
-  background: linear-gradient(180deg, #3b0764 0%, #ffffff 100%);
-  clip-path: ellipse(75% 100% at 50% 0%);
+/* Icon box with authentic extracted graphic images */
+.focus-icon-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
 }
 
 .doctor-card-body {
@@ -1717,3 +1827,94 @@ ul {
 }
 
 
+
+
+/* ==========================================================================
+   OFFICIAL BROCHURE SERVICES UI & HOUSE VISIT HIGHLIGHT
+   ========================================================================== */
+
+.house-visit-banner {
+  background: linear-gradient(135deg, #0284c7 0%, #0f766e 100%);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 2.25rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+  box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.25);
+  flex-wrap: wrap;
+}
+
+.house-visit-content {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.house-visit-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  color: #facc15;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.house-visit-text h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.25rem;
+}
+
+.house-visit-text p {
+  color: #e0f2fe;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.category-header-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.25rem;
+}
+
+.cat-physio {
+  background: #e0f2fe;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+}
+
+.cat-fitness {
+  background: #fef3c7;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+
+.cat-drugless {
+  background: #dcfce7;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+.tamil-sublabel {
+  font-size: 0.88rem;
+  color: #64748b;
+  font-weight: 600;
+  margin-left: 0.35rem;
+}
