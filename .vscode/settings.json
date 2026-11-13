@@ -1,0 +1,7 @@
+{
+  "liveServer.settings.mount": [
+    ["/", "./"]
+  ],
+  "liveServer.settings.fileExtensions": ["html", "htm"]
+}
+
